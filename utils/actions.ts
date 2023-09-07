@@ -22,3 +22,17 @@ export const checkItem = async (id) => {
 
     revalidatePath('/')
 }
+
+export const deleteItem = async (id) => {
+    await db.listItem.delete({
+        where: { id }
+    })
+
+    revalidatePath('/')
+}
+
+export const deleteAll = async ({}) => {
+    await db.listItem.deleteMany({})
+
+    revalidatePath('/')
+}
