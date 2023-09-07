@@ -11,3 +11,14 @@ export const newListItem = async (formData) => {
 
     revalidatePath('/')
 }
+
+export const checkItem = async (id) => {
+    await db.listItem.update({
+        where: { id },
+        data: {
+            checked: true
+        }
+    })
+
+    revalidatePath('/')
+}
