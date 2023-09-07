@@ -1,8 +1,11 @@
 'use client'
 
-const ErrorUI = () => {
+const ErrorUI = ({error}) => {
     return(
-        <div>whoops</div>
+        <div>
+            {error.type}
+            {error.message}
+        </div>
     )
 }
 
