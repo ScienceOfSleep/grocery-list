@@ -1,9 +1,21 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import db from '../../utils/db'
+import GroceryList from '../../components/GroceryList'
 
-export default function Home() {
+const getData = async () => {
+  const listItems = await db.listItem.findMany({})
+  return listItems
+}
+
+const Home = async () => {
+  const listItems = await getData()
   return (
     <main>
+      Hello
+      <GroceryList listItems={listItems}/>
     </main>
   )
 }
+
+export default Home
