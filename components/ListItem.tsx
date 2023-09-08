@@ -1,15 +1,25 @@
 'use client'
 import { useTransition } from "react"
-import { checkItem } from "../utils/actions"
+import { checkItem, deleteItem } from "../utils/actions"
 import styles from './ListItem.module.css'
 
 const ListItem = ({ listItem }) => {
     const [isPending, startTransition] = useTransition()
-    return <div
-    className={`${listItem.checked ? styles.checked : styles.item}` } 
-    onClick={() => startTransition(() => checkItem(listItem.id))}>
-        {listItem.content}
-    </div>
+    return <li className={styles.listItem}>
+        {/* Content */}
+        <span
+            className={`${listItem.checked ? styles.checked : styles.item}` } 
+            onClick={() => startTransition(() => checkItem(listItem.id))}
+        >
+            {listItem.content}
+        </span>
+        {/* Delete */}
+        <span
+            onClick={() => startTransition(() => deleteItem(listItem.id))}
+        >
+            Delete
+        </span>
+    </li>
 }
 
 export default ListItem

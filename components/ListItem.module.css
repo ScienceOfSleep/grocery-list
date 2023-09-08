@@ -1,3 +1,9 @@
+.list-item {
+  display: flex;
+}
+.listItem {
+  display: flex;
+}
 .checked {
   text-decoration: line-through;
 }

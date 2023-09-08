@@ -12,7 +12,6 @@ const Home = async () => {
   const listItems = await getData()
   return (
     <main>
-      Hello
       <GroceryList listItems={listItems}/>
     </main>
   )
