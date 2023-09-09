@@ -1,0 +1,19 @@
+:root {
+  --color-bg: hsl(167, 43%, 96%);
+  --color-bg-dark: hsl(174, 30%, 86%);
+  --color-accent: hsl(173, 58%, 72%);
+  --color-accent-light: hsl(172, 66%, 86%);
+  --color-accent-dark: hsl(173, 22%, 29%);
+  --color-highlight: hsl(348, 100%, 70%);
+  --color-grey: hsl(195, 3%, 69%);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px 0;
+  background-color: var(--color-bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

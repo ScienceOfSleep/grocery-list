@@ -8,7 +8,7 @@ const ListItem = ({ listItem }) => {
     return <li className={styles.listItem}>
         {/* Content */}
         <span
-            className={`${listItem.checked ? styles.checked : styles.item}` } 
+            className={`${listItem.checked ? styles.checked : styles.item} ${styles.content}` } 
             onClick={() => startTransition(() => checkItem(listItem.id))}
         >
             {listItem.content}
@@ -16,6 +16,7 @@ const ListItem = ({ listItem }) => {
         {/* Delete */}
         <span
             onClick={() => startTransition(() => deleteItem(listItem.id))}
+            className={styles.delete}
         >
             Delete
         </span>

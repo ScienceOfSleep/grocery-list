@@ -1,9 +1,25 @@
-.list-item {
-  display: flex;
-}
 .listItem {
+  margin-top: 8px;
+  min-width: 325px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 999999px;
+  box-shadow: 0 0 2px var(--color-grey);
+}
+.content {
+  padding: 2px 12px;
 }
 .checked {
   text-decoration: line-through;
+}
+.delete {
+  background-color: var(--color-accent);
+  color: var(--color-accent-dark);
+  border-top-right-radius: 99999999px;
+  border-bottom-right-radius: 99999999px;
+  padding: 2px 12px 2px 6px;
+  font-weight: 600;
+  box-shadow: 0 0 1px var(--color-grey);
 }

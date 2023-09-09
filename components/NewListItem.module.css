@@ -1,0 +1,28 @@
+.stickyFooter {
+  --footer-height: 100px;
+  height: var(--footer-height);
+  width: 100%;
+  position: fixed;
+  top: calc(100svh - var(--footer-height));
+  display: grid;
+  place-items: center;
+}
+
+.input {
+  background-color: #fff;
+  border-top-left-radius: 999999px;
+  border-bottom-left-radius: 9999999px;
+  box-shadow: 0 0 4px var(--color-grey);
+  border: none;
+}
+
+.button {
+  background-color: var(--color-accent);
+  color: var(--color-accent-dark);
+  border-top-right-radius: 99999999px;
+  border-bottom-right-radius: 99999999px;
+  padding: 2px 12px 2px 6px;
+  font-weight: 600;
+  box-shadow: 0 0 2px var(--color-grey);
+  border: none;
+}

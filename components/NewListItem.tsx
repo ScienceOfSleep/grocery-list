@@ -1,11 +1,21 @@
 import { newListItem } from "../utils/actions"
+import styles from "./NewListItem.module.css"
 
 const NewListItem = ({}) => {
     return(
-        <div>
+        <div className={styles.stickyFooter}>
             <form action={newListItem}>
-                <input name="content" type="text" />
-                <button type="submit">Add to list</button>
+                <input 
+                    name="content" 
+                    type="text" 
+                    className={styles.input}
+                />
+                <button
+                    type="submit"
+                    className={styles.button}
+                >
+                    Add to list
+                </button>
             </form>
         </div>
     )
