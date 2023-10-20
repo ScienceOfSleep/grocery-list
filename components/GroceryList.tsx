@@ -1,12 +1,13 @@
 import ListItem from "./ListItem"
+import styles from "./GroceryList.module.css"
 
 const GroceryList = ({ listItems }) => {
     return(
-        <div>
+        <ul className={styles.list}>
             {listItems.map(listItem => (
                 <ListItem listItem={listItem} key={listItem.id}/>
             ))}
-        </div>
+        </ul>
     )
 }
 
